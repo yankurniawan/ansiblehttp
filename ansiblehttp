@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+import cherrypy
+from subprocess import call
+
+class ansible(object):
+    @cherrypy.expose
+    def ansible(self, playbook="site.yml"):
+        call(["ansible-playbook", playbook])
+        return "Done "
+
+if __name__ == '__main__':
+    cherrypy.config.update({'server.socket_host': '172.31.0.1',
+                            'server.socket_port': 7780,
+                           })
+    cherrypy.quickstart(ansible())
