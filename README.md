@@ -10,7 +10,6 @@ You need to install cherrypy first:
 Update the server configuration in the script:
 
 `'server.socket_host':` *private_ip_address_of_your_ansible_host*  
-# http server port
 `'server.socket_port': 7780`  
 
 `# chmod +x ansiblehttp`  
