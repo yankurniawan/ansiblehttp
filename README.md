@@ -17,5 +17,5 @@ Update the server configuration in the script:
 
 From the new instance run:
 
-`curl http://ansibleipaddress:7780/ansible?playbook=site.yml`
+`curl http://ansibleipaddress:7780/ansible?playbook=something.yml`
 
